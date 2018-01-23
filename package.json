@@ -1,5 +1,5 @@
 {
-  "name": "grid-styled",
+  "name": "@ghostgroup/grid-styled",
   "version": "2.0.0-11",
   "description": "Responsive React grid system built with styled-components",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "layout",
     "css"
   ],
-  "author": "Brent Jackson",
+  "author": "Charles King",
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.22.0",
