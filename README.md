@@ -4,7 +4,7 @@
 Responsive React grid system built with [styled-components](https://github.com/styled-components/styled-components)
 
 
-[![Build Status](https://travis-ci.org/ghostgroup/grid-styled.svg?branch=master)](https://travis-ci.org/ghostgroup/grid-styled)
+[![Build Status](https://travis-ci.org/GhostGroup/grid-styled.svg?branch=master)](https://travis-ci.org/GhostGroup/grid-styled)
 
 ## Getting Started
 
