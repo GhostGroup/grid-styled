@@ -1,4 +1,4 @@
-<Flex flex-wrap className='bold'>
+<Flex flexWrap className='bold'>
   <Box px={2} py={1} width={1/2}>
     <Bar />
     1/2

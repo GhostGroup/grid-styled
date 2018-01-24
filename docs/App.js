@@ -61,7 +61,7 @@ class App extends React.Component {
 
     return (
       <div style={sx.root}>
-        <Flex flex-wrap align='center' style={sx.controls} isActive>
+        <Flex wrap alignItems='center' style={sx.controls} isActive>
           <Hide xs>
             <BaseButton
               onClick={e => update({ index: 0 })}

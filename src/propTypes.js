@@ -1,15 +1,6 @@
-import {
-  oneOfType,
-  number,
-  string,
-  array,
-} from 'prop-types'
+import { oneOfType, number, string, array } from "prop-types";
 
-const responsivePropType = oneOfType([
-  number,
-  string,
-  array
-])
+const responsivePropType = oneOfType([number, string, array]);
 
 const propTypes = {
   width: responsivePropType,
@@ -29,7 +20,7 @@ const propTypes = {
   pb: responsivePropType,
   pl: responsivePropType,
   px: responsivePropType,
-  py: responsivePropType,
-}
+  py: responsivePropType
+};
 
-export default propTypes
+export default propTypes;

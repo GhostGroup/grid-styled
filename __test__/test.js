@@ -71,10 +71,10 @@ test('Flex renders', t => {
 test('Flex renders with props', t => {
   const flex = shallow(
     <Flex
-      flex-wrap
-      direction='column'
-      align='center'
-      justify='space-between'
+      flexWrap
+      flexDirection='column'
+      alignItems='center'
+      justifyContent='space-between'
     />
   )
   t.snapshot(flex)
@@ -92,10 +92,10 @@ test('Flex renders with column prop', t => {
 test('Flex renders with responsive props', t => {
   const flex = shallow(
     <Flex
-      flex-wrap={[ true, false ]}
-      direction={[ 'column', 'row' ]}
-      align={[ 'stretch', 'center' ]}
-      justify={[ 'space-between', 'center' ]}
+      flexWrap={[ true, false ]}
+      flexDirection={[ 'column', 'row' ]}
+      alignItems={[ 'stretch', 'center' ]}
+      justifyContent={[ 'space-between', 'center' ]}
     />
   )
   t.snapshot(flex)
