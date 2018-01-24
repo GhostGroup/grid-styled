@@ -1,39 +1,36 @@
-import React from 'react'
-import styled from 'styled-components'
-import { responsiveStyle } from 'styled-system'
-import { oneOfType, number, string, array, bool } from 'prop-types'
-import propTypes from './propTypes'
-import Box from './Box'
+import React from "react";
+import styled from "styled-components";
+import { responsiveStyle } from "styled-system";
+import { oneOfType, number, string, array, bool } from "prop-types";
+import propTypes from "./propTypes";
+import Box from "./Box";
 
-const wrap = responsiveStyle('flex-wrap', 'wrap', 'wrap')
-const direction = responsiveStyle('flex-direction', 'direction')
-const align = props => responsiveStyle('align-items', 'align')
-const justify = props => responsiveStyle('justify-content', 'justify')
-const column = props => props.column ? `flex-direction:column;` : null
+const flexWrap = responsiveStyle("flex-wrap", "flex-wrap", "flexWrap");
+const flexDirection = responsiveStyle("flex-direction", "flexDirection");
+const alignItems = props => responsiveStyle("align-items", "alignItems");
+const justifyContent = props =>
+  responsiveStyle("justify-content", "justifyContent");
+const column = props => (props.column ? `flex-direction:column;` : null);
 
-const Flex = styled(Box)([],
-  { display: 'flex' },
-  wrap,
+const Flex = styled(Box)(
+  [],
+  { display: "flex" },
+  flexWrap,
   column,
-  direction,
-  align,
-  justify,
-)
-Flex.displayName = 'Flex'
+  flexDirection,
+  alignItems,
+  justifyContent
+);
+Flex.displayName = "Flex";
 
-const responsivePropType = oneOfType([
-  number,
-  string,
-  array,
-  bool
-])
+const responsivePropType = oneOfType([number, string, array, bool]);
 
 Flex.propTypes = Object.assign({}, propTypes, {
-  wrap: responsivePropType,
-  direction: responsivePropType,
-  align: responsivePropType,
-  justify: responsivePropType,
+  flexWrap: responsivePropType,
+  flexDirection: responsivePropType,
+  alignItems: responsivePropType,
+  justifyContent: responsivePropType,
   column: bool
-})
+});
 
-export default Flex
+export default Flex;

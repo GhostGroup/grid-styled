@@ -180,10 +180,10 @@ Sets the underlying HTML element.
 The Flex component extends the Box component and sets display flex.
 It also includes the following props:
 
-- `align` (string|array) sets `align-items`
-- `justify` (string|array) sets `justify-content`
-- `direction` (string|array) sets `flex-direction`
-- `wrap` (boolean|array) sets `flex-wrap: wrap`
+- `alignItems` (string|array) sets `align-items`
+- `justifyContent` (string|array) sets `justify-content`
+- `flexDirection` (string|array) sets `flex-direction`
+- `flexWrap` (boolean|array) sets `flex-wrap: wrap`
 - `column` (boolean) shortcut for `flex-direction: column`
 
 

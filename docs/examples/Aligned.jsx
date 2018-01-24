@@ -1,4 +1,4 @@
-<Flex align='baseline' justify='space-around'>
+<Flex alignItems='baseline' justifyContent='space-around'>
   <Box p={2}>
     <h2 className='h2 xh0 m0'>Baseline</h2>
     <Bar />
