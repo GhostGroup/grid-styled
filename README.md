@@ -9,7 +9,7 @@ Responsive React grid system built with [styled-components](https://github.com/s
 ## Getting Started
 
 ```sh
-npm i grid-styled
+npm i @ghostgroup/grid-styled
 ```
 
 ```jsx
