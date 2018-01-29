@@ -5,7 +5,7 @@ import { oneOfType, number, string, array, bool } from "prop-types";
 import propTypes from "./propTypes";
 import Box from "./Box";
 
-const flexWrap = responsiveStyle("flex-wrap", "flex-wrap", "flexWrap");
+const flexWrap = responsiveStyle("flex-wrap", "flexWrap", "wrap");
 const flexDirection = responsiveStyle("flex-direction", "flexDirection");
 const alignItems = props => responsiveStyle("align-items", "alignItems");
 const justifyContent = props =>
