@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { responsiveStyle } from "styled-system";
 import { oneOfType, number, string, array, bool } from "prop-types";
 import propTypes from "./propTypes";
-import Box from "./Box";
+import Box from "./box";
 
 const flexWrap = responsiveStyle("flex-wrap", "flexWrap", "wrap");
 const flexDirection = responsiveStyle("flex-direction", "flexDirection");

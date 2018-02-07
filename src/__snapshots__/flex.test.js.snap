@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flex can use a different component with the "is" prop 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+<Flex
+  is="section"
+  m={2}
+  px={3}
+>
+  <Box
+    className="c0"
+    is="section"
+    m={2}
+    px={3}
+  >
+    <styled.section
+      className="c0"
+      m={2}
+      px={3}
+    >
+      <section
+        className="c0 c1"
+      >
+        Test
+      </section>
+    </styled.section>
+  </Box>
+</Flex>
+`;
+
+exports[`flex renders 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<Box
+  className="c0"
+  is="div"
+/>
+`;
+
+exports[`flex renders with column prop 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<Box
+  className="c0"
+  column={true}
+  is="div"
+/>
+`;
+
+exports[`flex renders with props 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<Box
+  alignItems="center"
+  className="c0"
+  flexDirection="column"
+  flexWrap={true}
+  is="div"
+  justifyContent="space-between"
+/>
+`;
+
+exports[`flex renders with responsive props 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<Box
+  alignItems={
+    Array [
+      "stretch",
+      "center",
+    ]
+  }
+  className="c0"
+  flexDirection={
+    Array [
+      "column",
+      "row",
+    ]
+  }
+  flexWrap={
+    Array [
+      true,
+      false,
+    ]
+  }
+  is="div"
+  justifyContent={
+    Array [
+      "space-between",
+      "center",
+    ]
+  }
+/>
+`;

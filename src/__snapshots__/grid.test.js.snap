@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`grid can use a different component with the "is" prop 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+<Grid
+  is="section"
+  m={2}
+  px={3}
+>
+  <Box
+    className="c0"
+    is="section"
+    m={2}
+    px={3}
+  >
+    <styled.section
+      className="c0"
+      m={2}
+      px={3}
+    >
+      <section
+        className="c0 c1"
+      >
+        Test
+      </section>
+    </styled.section>
+  </Box>
+</Grid>
+`;
+
+exports[`grid renders 1`] = `
+.c0 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+<Box
+  className="c0"
+  is="div"
+/>
+`;

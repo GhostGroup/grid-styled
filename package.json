@@ -7,10 +7,9 @@
     "dist"
   ],
   "scripts": {
-    "prepublish": "babel src -d dist",
+    "prepublish": "babel src -d dist --ignore spec.js,test.js",
     "lint": "./node_modules/.bin/eslint ./src",
-    "test": "nyc ava",
-    "cover": "nyc report --reporter=lcov --reporter=html",
+    "test": "NODE_ENV=test jest --no-cache --coverage",
     "start": "webpack-dev-server",
     "docs": "NODE_ENV=production webpack -p",
     "icon-dev": "repng docs/Icon.js --dev",
@@ -27,57 +26,71 @@
   "author": "Charles King",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.22.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.16.0",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "^4.17.0",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.5.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "funcup": "^1.0.0-1",
     "glamor": "^2.20.40",
     "hidden-styled": "^1.0.0-0",
     "html-webpack-plugin": "^2.30.1",
-    "nyc": "^11.2.1",
+    "jest-cli": "^22.1.4",
+    "jest-environment-node-debug": "^2.0.0",
+    "jest-styled-components": "4.11.0-1",
+    "nyc": "^11.4.1",
     "prettier": "^1.10.2",
     "raw-loader": "^0.5.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-live": "^1.7.1",
-    "styled-components": "~3.0.2",
-    "react-test-renderer": "^16.0.0",
-    "react-x-ray": "^1.0.0-3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-live": "^1.9.2",
+    "react-test-renderer": "^16.2.0",
+    "react-x-ray": "^1.0.0-4",
     "reline": "^1.0.0-beta.3",
     "repng": "^2.0.0-alpha.1",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "styled-components": "~3.1.6",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "styled-system": "^1.0.2"
+    "styled-system": "^1.1.4"
   },
   "peerDependencies": {
     "react": ">=0.15.0 <17.0.0",
     "styled-components": ">=2.0.0 <4.0.0"
   },
-  "nyc": {
-    "exclude": [
-      "__test__/*.js"
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/lib/jest/configure-enzyme.js",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "dist/"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
-  },
-  "ava": {
-    "files": [
-      "__test__/*.js"
-    ],
-    "require": [
-      "babel-register"
-    ],
-    "babel": "inherit"
   }
 }
