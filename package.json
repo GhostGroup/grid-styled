@@ -1,6 +1,6 @@
 {
   "name": "@ghostgroup/grid-styled",
-  "version": "2.0.0-11",
+  "version": "3.0.2",
   "description": "Responsive React grid system built with styled-components",
   "main": "dist/index.js",
   "files": [
