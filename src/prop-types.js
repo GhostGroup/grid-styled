@@ -3,6 +3,7 @@ import { oneOfType, number, string, array } from "prop-types";
 const responsivePropType = oneOfType([number, string, array]);
 
 const propTypes = {
+  is: string,
   width: responsivePropType,
   fontSize: responsivePropType,
   color: responsivePropType,
