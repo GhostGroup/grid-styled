@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { responsiveStyle } from "styled-system";
 import { oneOfType, number, string, array, bool } from "prop-types";
-import propTypes from "./propTypes";
+import propTypes from "./prop-types";
 import Box from "./box";
 
 const flexWrap = responsiveStyle("flex-wrap", "flexWrap", "wrap");

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { space, width, responsiveStyle } from "styled-system";
 import { number, string, array, oneOfType } from "prop-types";
-import propTypes from "./propTypes";
+import propTypes from "./prop-types";
 const responsivePropType = oneOfType([number, string, array]);
 const flex = responsiveStyle("flex");
 const order = responsiveStyle("order");
