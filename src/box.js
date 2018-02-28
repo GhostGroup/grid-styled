@@ -19,9 +19,19 @@ class Box extends Component {
   };
 
   render() {
-    const {is, ...rest} = this.props;
-    const Base = styled(is)([], { boxSizing: "border-box" }, width, space, flex, order);
-    return <Base {...rest}/>;
+    const { is, ...rest } = this.props;
+    if (!this.base || this.is !== is) {
+      this.is = is;
+      this.base = styled(is)(
+        [],
+        { boxSizing: "border-box" },
+        width,
+        space,
+        flex,
+        order
+      );
+    }
+    return <this.base {...rest} />;
   }
 }
 
