@@ -4,7 +4,7 @@ import { shallow, mount } from "enzyme";
 import Box from "./box";
 
 describe("box", () => {
-  it("renders",() => {
+  it("renders", () => {
     const tree = shallow(<Box m={2} px={3} />);
     expect(tree).toMatchSnapshot();
   });
@@ -31,5 +31,21 @@ describe("box", () => {
       </Box>
     );
     expect(tree).toMatchSnapshot();
+  });
+
+  it("renders the same component when props change", () => {
+    class Component extends React.Component {
+      render() {
+        return (
+          <Box {...this.props}>
+            <div ref="childRef" />
+          </Box>
+        );
+      }
+    }
+    const tree = mount(<Component />);
+    const childRef = tree.ref("childRef");
+    tree.setProps({ value: "a new value" });
+    expect(tree.ref("childRef")).toBe(childRef);
   });
 });
