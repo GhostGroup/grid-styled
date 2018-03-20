@@ -7,6 +7,8 @@ const responsivePropType = oneOfType([number, string, array]);
 const flex = responsiveStyle("flex");
 const order = responsiveStyle("order");
 
+const BoxTypeMap = {};
+
 class Box extends Component {
   static propTypes = {
     ...propTypes,
@@ -20,9 +22,8 @@ class Box extends Component {
 
   render() {
     const { is, ...rest } = this.props;
-    if (!this.base || this.is !== is) {
-      this.is = is;
-      this.base = styled(is)(
+    if (!BoxTypeMap[is]) {
+      BoxTypeMap[is] = styled(is)(
         [],
         { boxSizing: "border-box" },
         width,
@@ -31,7 +32,8 @@ class Box extends Component {
         order
       );
     }
-    return <this.base {...rest} />;
+    const Comp = BoxTypeMap[is];
+    return <Comp {...rest} />;
   }
 }
 
