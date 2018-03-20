@@ -102,11 +102,22 @@ const App = () => (
 
 ```jsx
 // Display inline-block grid
+import { InlineBox } from 'grid-styled'
+
+<div>
+  <InlineBox width={1/2}>Half</InlineBox>
+  <InlineBox width={1/2}>Half</InlineBox>
+</div>
+```
+
+```jsx
+// Display grid of items
 import { Grid } from 'grid-styled'
 
 <div>
-  <Grid width={1/2}>Half</Grid>
-  <Grid width={1/2}>Half</Grid>
+  <Grid gridColumns={[2, 4, 6]} gridGaps={[5, 5, 10]}>
+    // grid items
+  </Grid>
 </div>
 ```
 
@@ -186,11 +197,13 @@ It also includes the following props:
 - `flexWrap` (boolean|array) sets `flex-wrap: wrap`
 - `column` (boolean) shortcut for `flex-direction: column`
 
-
 ## `<Grid />`
 
-The Grid component extends the Box component and sets display inline-block
-for an alternative to flexbox layout.
+The Grid component is a container that can be used to style a set of
+children into a grid
+
+- `gridColumns` (string|array) sets `number of columns in the Grid`
+- `gridGaps` (string|array) sets `grid-gap`
 
 
 ## Responsive Styles

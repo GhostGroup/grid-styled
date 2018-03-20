@@ -1,52 +1,282 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`grid can use a different component with the "is" prop 1`] = `
-.c0 {
-  display: inline-block;
-  vertical-align: top;
-}
-
+exports[`Grid can be extended 1`] = `
 .c1 {
-  box-sizing: border-box;
-  margin: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 3px;
 }
 
-<Grid
-  is="section"
-  m={2}
-  px={3}
+.c0 {
+  background-color: blue;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+<Styled(Styled(Box))
+  gridColumns={3}
+  gridGaps={3}
+  isActive={true}
 >
-  <Box
+  <Styled(Box)
     className="c0"
-    is="section"
-    m={2}
-    px={3}
+    gridColumns={3}
+    gridGaps={3}
+    isActive={true}
   >
-    <styled.section
-      className="c0"
-      m={2}
-      px={3}
+    <Box
+      className="c0 c1"
+      gridColumns={3}
+      gridGaps={3}
+      is="div"
+      isActive={true}
     >
-      <section
+      <styled.div
         className="c0 c1"
+        gridColumns={3}
+        gridGaps={3}
+        isActive={true}
       >
-        Test
-      </section>
-    </styled.section>
-  </Box>
-</Grid>
+        <div
+          className="c0 c1 c2"
+        />
+      </styled.div>
+    </Box>
+  </Styled(Box)>
+</Styled(Styled(Box))>
 `;
 
-exports[`grid renders 1`] = `
+exports[`Grid renders 1`] = `
 .c0 {
-  display: inline-block;
-  vertical-align: top;
+  display: grid;
 }
 
 <Box
   className="c0"
   is="div"
 />
+`;
+
+exports[`Grid renders with props 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 3px;
+}
+
+.c1 {
+  box-sizing: border-box;
+}
+
+<Styled(Box)
+  gridColumns={3}
+  gridGaps={3}
+>
+  <Box
+    className="c0"
+    gridColumns={3}
+    gridGaps={3}
+    is="div"
+  >
+    <styled.div
+      className="c0"
+      gridColumns={3}
+      gridGaps={3}
+    >
+      <div
+        className="c0 c1"
+      />
+    </styled.div>
+  </Box>
+</Styled(Box)>
+`;
+
+exports[`Grid renders with responsive props 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 5px;
+}
+
+.c1 {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c0 {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    grid-gap: 5px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c0 {
+    grid-gap: 10px;
+  }
+}
+
+<Styled(Box)
+  gridColumns={
+    Array [
+      1,
+      2,
+      3,
+    ]
+  }
+  gridGaps={
+    Array [
+      5,
+      5,
+      10,
+    ]
+  }
+>
+  <Box
+    className="c0"
+    gridColumns={
+      Array [
+        1,
+        2,
+        3,
+      ]
+    }
+    gridGaps={
+      Array [
+        5,
+        5,
+        10,
+      ]
+    }
+    is="div"
+  >
+    <styled.div
+      className="c0"
+      gridColumns={
+        Array [
+          1,
+          2,
+          3,
+        ]
+      }
+      gridGaps={
+        Array [
+          5,
+          5,
+          10,
+        ]
+      }
+    >
+      <div
+        className="c0 c1"
+      />
+    </styled.div>
+  </Box>
+</Styled(Box)>
+`;
+
+exports[`Grid works with aliases 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 11px;
+}
+
+.c1 {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    grid-gap: 12px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c0 {
+    grid-gap: 13px;
+  }
+}
+
+<Styled(Box)
+  grc={
+    Array [
+      4,
+      5,
+      6,
+    ]
+  }
+  grg={
+    Array [
+      11,
+      12,
+      13,
+    ]
+  }
+>
+  <Box
+    className="c0"
+    grc={
+      Array [
+        4,
+        5,
+        6,
+      ]
+    }
+    grg={
+      Array [
+        11,
+        12,
+        13,
+      ]
+    }
+    is="div"
+  >
+    <styled.div
+      className="c0"
+      grc={
+        Array [
+          4,
+          5,
+          6,
+        ]
+      }
+      grg={
+        Array [
+          11,
+          12,
+          13,
+        ]
+      }
+    >
+      <div
+        className="c0 c1"
+      />
+    </styled.div>
+  </Box>
+</Styled(Box)>
 `;
