@@ -7,12 +7,12 @@ exports[`Grid can be extended 1`] = `
   grid-gap: 3px;
 }
 
-.c0 {
-  background-color: blue;
-}
-
 .c2 {
   box-sizing: border-box;
+}
+
+.c0 {
+  background-color: blue;
 }
 
 <Styled(Styled(Box))
