@@ -200,9 +200,10 @@ It also includes the following props:
 ## `<Grid />`
 
 The Grid component is a container that can be used to style a set of
-children into a grid
+children into a grid with css-grid.  It sets display grid and includes
+the following props:
 
-- `gridColumns` (string|array) sets `number of columns in the Grid`
+- `gridColumns` (string|array) sets number of columns using `grid-template-columns`
 - `gridGaps` (string|array) sets `grid-gap`
 
 
