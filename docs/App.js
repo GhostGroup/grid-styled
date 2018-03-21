@@ -8,7 +8,7 @@ import {
   LivePreview
 } from 'react-live'
 import { createProvider } from 'funcup'
-import GS, { Flex, Box, Grid } from 'grid-styled'
+import GS, { Flex, Box, Grid, InlineBox } from 'grid-styled'
 import Hide from 'hidden-styled'
 import { colors } from './styles'
 import Color from './Color'
@@ -27,6 +27,7 @@ const scope = {
   Flex,
   Box,
   Grid,
+  InlineBox,
   Color,
   Bar,
   Button,

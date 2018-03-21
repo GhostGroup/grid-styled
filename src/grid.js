@@ -1,15 +1,38 @@
+import React from "react";
 import styled from "styled-components";
+import { responsiveStyle } from "styled-system";
+import { oneOfType, number, string, array, bool } from "prop-types";
+import propTypes from "./prop-types";
 import Box from "./box";
 
-const align = props => ({ verticalAlign: props.align || "top" });
+const repeatColumns = n => `repeat(${n}, 1fr)`;
+
+const gridColumns = props => responsiveStyle({    
+  prop: "gridColumns",
+  cssProperty: "gridTemplateColumns",
+  key: "gridColumns",
+  numberToPx: false,
+  getter: repeatColumns,
+  alias: "grc"
+});
+
+const gridGaps = props => responsiveStyle({
+  prop: "gridGaps",
+  cssProperty: "gridGap",
+  key: "gridGaps",
+  numberToPx: true,
+  alias: "grg"
+});
 
 const Grid = styled(Box)(
   [],
-  {
-    display: "inline-block"
-  },
-  align
+  { display: "grid" },
+  gridColumns,
+  gridGaps
 );
-Grid.displayName = "Grid";
+
+const responsivePropType = oneOfType([number, string, array, bool]);
+
+Grid.propTypes = { ...propTypes };
 
 export default Grid;

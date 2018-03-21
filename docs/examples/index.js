@@ -11,6 +11,7 @@ import Auto from './Auto.jsx'
 import RasterSysteme from './RasterSysteme.jsx'
 import Movement from './Movement.jsx'
 import Offset from './Offset.jsx'
+import GridOfItems from './GridOfItems.jsx'
 
 export default [
   Hero,
@@ -26,4 +27,5 @@ export default [
   RasterSysteme,
   Movement,
   Offset,
+  GridOfItems,
 ]

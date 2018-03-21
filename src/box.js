@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { space, width, responsiveStyle } from "styled-system";
+import { space, width, flex, order, display } from "styled-system";
 import { number, string, array, oneOfType } from "prop-types";
 import propTypes from "./prop-types";
 const responsivePropType = oneOfType([number, string, array]);
-const flex = responsiveStyle("flex");
-const order = responsiveStyle("order");
 
 const BoxTypeMap = {};
 
 class Box extends Component {
   static propTypes = {
     ...propTypes,
-    flex: responsivePropType,
-    order: responsivePropType
+    ...space.propTypes,
+    ...flex.propTypes,
+    ...order.propTypes,
+    ...display.propTypes
   };
 
   static defaultProps = {
@@ -29,7 +29,8 @@ class Box extends Component {
         width,
         space,
         flex,
-        order
+        order,
+        display
       );
     }
     const Comp = BoxTypeMap[is];
