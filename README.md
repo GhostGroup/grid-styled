@@ -14,7 +14,7 @@ npm i @ghostgroup/grid-styled
 
 ```jsx
 import React from 'react'
-import { Flex, Box } from 'grid-styled'
+import { Flex, Box } from '@ghostgroup/grid-styled'
 
 const App = () => (
   <Flex>
